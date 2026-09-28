@@ -21,8 +21,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyProject.Application\MyProject.Application.csproj" />
-    <ProjectReference Include="..\MyProject.Persistence\MyProject.Persistence.csproj" />
+    <ProjectReference Include="MyProject.Application\MyProject.Application.csproj" />
+    <ProjectReference Include="MyProject.Persistence\MyProject.Persistence.csproj" />
   </ItemGroup>
-
+<ItemGroup>
+  <Compile Remove="MyProject.Application\**" />
+  <Compile Remove="MyProject.Domain\**" />
+  <Compile Remove="MyProject.Persistence\**" />
+  <EmbeddedResource Remove="MyProject.Application\**" />
+  <EmbeddedResource Remove="MyProject.Domain\**" />
+  <EmbeddedResource Remove="MyProject.Persistence\**" />
+  <None Remove="MyProject.Application\**" />
+  <None Remove="MyProject.Domain\**" />
+  <None Remove="MyProject.Persistence\**" />
+</ItemGroup>
 </Project>
