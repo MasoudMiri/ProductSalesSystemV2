@@ -20,6 +20,8 @@ namespace MyProject.Persistence.Context
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Type).IsRequired().HasMaxLength(100);
+                entity.Property(p => p.Discount).HasPrecision(18, 2);
+
             });
         }
     }
